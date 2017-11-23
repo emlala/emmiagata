@@ -10,5 +10,5 @@ Do Wikipedia articles then have mixed use of US and UK spelling?
 The program would have a simple input of a word (in either spelling). 
 
 The output would include:
-* percentages of UK and US spelling
+* percentages of the word in UK and US spelling
 * a list of articles that have mixed spelling of the word
