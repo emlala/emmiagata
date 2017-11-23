@@ -12,3 +12,6 @@ The program would have a simple input of a word (in either spelling).
 The output would include:
 * percentages of the word in UK and US spelling
 * a list of articles that have mixed spelling of the word
+
+NOTE:
+Exclude from the data the Wikipedia article on US and UK English spelling differences! :)
