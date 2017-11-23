@@ -7,8 +7,8 @@ We want to see how articles of the English Wikipedia are written; which variant 
 Wikipedia articles are created and updated by a group of people who might use different spelling conventions.
 Do Wikipedia articles then have mixed use of US and UK spelling?
 
-The program would have an input of a word (in either spelling). 
+The program would have a simple input of a word (in either spelling). 
 
 The output would include:
 * percentages of UK and US spelling
-* a list of articles that have mixed spelling of the word. 
+* a list of articles that have mixed spelling of the word
