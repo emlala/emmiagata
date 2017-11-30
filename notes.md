@@ -1,6 +1,7 @@
 ## Planning the application ##
 
 --- 23.11.2017 ---
+
 There are many well-known differences between US English and UK English spelling. 
 However, there is only one English Wikipedia, which does not define a language variant.
 We want to see how articles of the English Wikipedia are written; which variant is preferred throughout?
