@@ -2,6 +2,7 @@ import json
 import urllib.request
 import pandas as pd
 
+
 wordlist = pd.read_csv('wordlist.csv')
 
 
@@ -25,20 +26,27 @@ while True:
 connection1 = urllib.request.urlopen('http://localhost:8983/solr/wiki/select?q=text:('+query+'%20NOT%20'+word2+')&wt=json')
 response = json.load(connection1)
 
-print(response['response']['numFound'], "documents found with the word spelled only as "+query+". This is the "+query_variant+" version of the word.")
-
-# Print the name of each document.
-# for document in response['response']['docs']:
-#    print("  Title =", document['title'])
+print('\n', response['response']['numFound'], "documents found with the word spelled only as "+query+". This is the "+query_variant+" version of the word.")
+# Print the name of 5 example documents and links to them.
+print(" Articles with this spelling include, for example:")
+for document in response['response']['docs'][:5]:
+    print("  >", document['title']+', https://en.wikipedia.org/?curid='+document['id'])
 
 
 
 # 2. input word's UK/US version query
 connection2 = urllib.request.urlopen('http://localhost:8983/solr/wiki/select?q=text:('+word2+'%20NOT%20'+query+')&wt=json')
 pair = json.load(connection2)
-print(pair['response']['numFound'], "documents found with the word spelled only as "+word2+". This is the "+word2_variant+" version of the word.")
+print('\n', pair['response']['numFound'], "documents found with the word spelled only as "+word2+". This is the "+word2_variant+" version of the word.")
+print(" Articles with this spelling include, for example:")
+for document in pair['response']['docs'][:5]:
+    print("  >", document['title']+', https://en.wikipedia.org/?curid=' + document['id'])
+
 
 # 3. mixed spelling query
 connection3 = urllib.request.urlopen('http://localhost:8983/solr/wiki/select?q=text:('+query+'%20AND%20'+word2+')&wt=json')
 mixed = json.load(connection3)
-print(mixed['response']['numFound'], "documents found with mixed spelling.")
+print('\n', mixed['response']['numFound'], "documents found with mixed spelling.")
+print(" Articles with mixed spelling include, for example:")
+for document in mixed['response']['docs'][:5]:
+    print("  >", document['title']+', https://en.wikipedia.org/?curid=' + document['id'])
