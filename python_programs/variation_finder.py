@@ -66,7 +66,7 @@ def main():
             word2_search(query, word2, word2_variant)
             mixed_search(query, word2)
             print('\nDo you want to search again? If you want to quit the program, please give \'Q\' as input.')
-        if query == 'Q':
+        elif query == 'Q':
             print('Bye!')
             break
 
