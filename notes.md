@@ -41,6 +41,10 @@ TODO:
 * add percentages of each category
 * create first version of Django app that uses the current program
 
+--- 11.12.2017 ---
 
-
+* Added lists of example articles and links to the articles to the output, instead of snippets
+* Decided that percentages are maybe unnecessary?
+* Updated README with instructions
+* Difficulties with Django, will demo the program tomorrow as it now is through command line
 
