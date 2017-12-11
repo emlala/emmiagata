@@ -11,7 +11,8 @@ def input_search(query, word2, query_variant):
         'http://localhost:8983/solr/wiki/select?q=text:('+query+'%20NOT%20'+word2+')&wt=json')
     response = json.load(connection1)
     print('\n', response['response']['numFound'],
-          "documents found with the word spelled only as "+query+". This is the "+query_variant+" version of the word.")
+          "documents found with the word spelled only as "+query+". 
+          This is the "+query_variant+" version of the word.")
 # Print the names of 5 example documents and links to them.
     print(" Articles with this spelling include, for example:")
     for document in response['response']['docs'][:5]:
@@ -23,7 +24,8 @@ def word2_search(query, word2, word2_variant):
         'http://localhost:8983/solr/wiki/select?q=text:(' + word2 + '%20NOT%20' + query + ')&wt=json')
     pair = json.load(connection2)
     print('\n', pair['response']['numFound'],
-          "documents found with the word spelled only as " + word2 + ". This is the " + word2_variant + " version of the word.")
+          "documents found with the word spelled only as " + word2 + ". 
+          This is the " + word2_variant + " version of the word.")
     print(" Articles with this spelling include, for example:")
     for document in pair['response']['docs'][:5]:
         print("  >", document['title'] + ', https://en.wikipedia.org/?curid=' + document['id'])
@@ -42,7 +44,8 @@ def mixed_search(query, word2):
 # actual program
 
 def main():
-    print('Hello, please give me a word in US or UK English spelling as input. \nIf you want to quit the program, please give \'Q\' as input.')
+    print('Hello, please give me a word in US or UK English spelling as input.
+          \nIf you want to quit the program, please give \'Q\' as input.')
     while True:
         query = input("Input:")
         if query != "Q":
@@ -59,9 +62,10 @@ def main():
                     word2_variant = "UK"
                     break
                 else:
-                    print("I couldn't find a different spelling for this word. Please try again.")
+                    print("Woops, I couldn't find a different spelling for this word. Please try again.")
                     query = input("Input:")
                     continue
+            # perform the searches
             input_search(query, word2, query_variant)
             word2_search(query, word2, word2_variant)
             mixed_search(query, word2)
