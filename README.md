@@ -6,7 +6,9 @@ There are many well-known differences between US English and UK English spelling
 
 With this tool it is easy to see which variant of the word given by the user is more popular in the data set and if there is internal variation within documents (i.e. if there are articles that use spelling versions inconsistently).
 
-In order to run the program, you first have to install, configure and run [Solr](http://www.apache.org/dyn/closer.lua/lucene/solr/7.1.0), download the data you want to use and index the data. After that, run the variation_finder.py in the console.
+## How to run the program
+You first have to install, configure and run [Solr](http://www.apache.org/dyn/closer.lua/lucene/solr/7.1.0), download the data you want to use - for example [the latest data dumps of English Wikipedia](https://dumps.wikimedia.org/enwiki/latest/) - and index the data. 
+After that, run [variation_finder.py](https://github.com/emlala/emmiagata/blob/master/python_programs/variation_finder.py) in the console.
 
 The expected input of the program is a word which is known to have alternative spellings. 
 
