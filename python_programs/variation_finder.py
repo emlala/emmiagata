@@ -44,8 +44,7 @@ def mixed_search(query, word2):
 # actual program
 
 def main():
-    print('Hello, please give me a word in US or UK English spelling as input.
-          \nIf you want to quit the program, please give \'Q\' as input.')
+    print('Hello, please give me a word in US or UK English spelling as input. \nIf you want to quit the program, please give \'Q\' as input.')
     while True:
         query = input("Input:")
         if query != "Q":
