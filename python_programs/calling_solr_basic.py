@@ -1,3 +1,6 @@
+# this is a very basic programme that communicates with solr
+# it simply takes a query word as input and uses solr to search for the documents where the query term is found
+
 import urllib.request
 import json
 
