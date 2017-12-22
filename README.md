@@ -17,4 +17,4 @@ The output includes:
 * a number and a short list of articles with US spelling of the word along with the links to them
 * a number and a short list of articles that have mixed spelling of the word along with the links to them
 
-At the moment there are no edge cases, as the program is fairly simple. If the input word is not included in the list, the program will ask the user to put in another word.
+At the moment there are no edge cases, as the program is fairly simple. If the input word is not included in the list, the program will ask the user to put in another word. The program will continue running and asking for search words, until the user gives "Q" as input.
