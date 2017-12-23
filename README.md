@@ -10,6 +10,12 @@ With this tool it is easy to see which variant of the word given by the user is 
 You first have to install, configure and run [Solr](http://www.apache.org/dyn/closer.lua/lucene/solr/7.1.0), download the data you want to use - for example [the latest data dumps of English Wikipedia](https://dumps.wikimedia.org/enwiki/latest/) - and index the data. 
 After that, run [variation_finder.py](https://github.com/emlala/emmiagata/blob/master/python_programs/variation_finder.py) in the console.
 
+The alternative version of the program, **variation finder web**, which uses [web.py infrastructure](http://webpy.org/docs/0.3/tutorial), is the first version of a  web app using the variation finder. 
+
+The way to start the program is to use the follwoing in the command line:
+$ python variation_finder_web.py *port number*
+
+## Input and output
 The expected input of the program is a word which is known to have alternative spellings. 
 
 The output includes:
