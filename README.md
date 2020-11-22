@@ -1,5 +1,5 @@
 # Agata & Emmi
-*Course work for KIK-LG211 Building NLP Applications*
+*Course work for KIK-LG211 Building NLP Applications, autumn 2017*
 
 The main program, **"variation finder"**, is a simple program which looks at English Wikipedia data and finds the spelling variation in Wikipedia documents based on [a list of pre-defined UK and US differences](https://github.com/emlala/emmiagata/blob/master/python_programs/wordlist.csv).
 There are many well-known differences between US English and UK English spelling. However, there is only one English Wikipedia, which does not define any language variant; Wikipedia articles are created and updated by a group of people who might use different spelling conventions. 
